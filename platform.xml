@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Platform>
+    <boardName name="Altera CycloneV Soc Development Kit">
+        <revision>revD</revision>
+        <device>Cyclone5</device>
+        <partNumber>141100</partNumber>
+        <neighbor name="Austria" direction="E"/>
+        <neighbor name="Switzerland" direction="W"/>
+    </boardName>
+    <boardName name="Altera ArriaV Soc Development Kit">
+        <revision>revD</revision>
+        <device>Cyclone5</device>
+        <partNumber>141100</partNumber>
+        <neighbor name="Austria" direction="E"/>
+        <neighbor name="Switzerland" direction="W"/>
+    </boardName>
+    <boardName name="Arrow Sockit">
+        <revision>revD</revision>
+        <device>Cyclone5</device>
+        <partNumber>141100</partNumber>
+        <neighbor name="Austria" direction="E"/>
+        <neighbor name="Switzerland" direction="W"/>
+    </boardName>
+
+</Platform>
