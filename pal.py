@@ -2,6 +2,8 @@
 import sys, getopt
 import xml.etree.ElementTree as ET
 
+#this is a test to check the push function from work
+
 #this is a test to see if everthig is working ok!
 print "Welcome to PAL, let me help you to build you reference design"
 def main(argv):
