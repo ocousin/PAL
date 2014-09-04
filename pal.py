@@ -51,7 +51,7 @@ def main(argv):
     tree = ET.parse(inputfile)
     root = tree.getroot()
     
-    
+    createQSF(outputfile)
     
     #f = open(inputfile, 'r')
     #for line in f:
