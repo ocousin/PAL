@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+
+\title{ PAL \\ (Platform Abstraction Layer)\\ Design Specification}
+
+\author{Olivier Cousin}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document describes, the software, the files format and the algorithms used to develop "PAL"
+\end{abstract}
+
+\section{Objective}
+
+The objective of this project is to enable Altera users, to create a board reference design for a dedicated platform, simply by selecting the required interface, how many of them, and type of processor. Once these configuration choices are made, PAL will create all the required file to create a running project ready to be used and modified.  
+No specific knowledge will be required to configure the IPs, and no pin information will be needed. 
+
+A “Platform description” file format, will be described in this document along with all the necessary steps to instantiate, IP (Pcie, triple speed Ethernet, to create a qsys system, along with the Quartus II project including assignments, timing constraints, and I/O placement.
+Once the “Platform description” file is created, along with the templates, all the different combinations of reference designs can be automatically generated and tailored as need.
+
+
+\section{Strategy}
+Realise a proof of concept, using the Altera SoC development Kit, to automatically generate a reference design that includes NiosII, HPS, Hard Memory controller, Triple speed Ethernet and PCIe.
+
+The configuration of this particular reference design will be done only by answering command prompt question, or running a command line using the specific switches.
+
+\section{Tactics}
+
+\begin{enumerate}
+\item Define a “Platform Abstraction Layer” file that includes all the necessary information to fulfil our objective
+\begin{itemize}
+	\item[-] Hardware IP configuration and component creation
+	\begin{itemize}
+		\item The DDR3 Hard Memory controller
+		\item The Triple speed Ethernet
+		\item PCIe
+		\item NiosII
+		\item HPS
+		\end{itemize}
+\end{itemize}
+\item Automatic qsys system generation
+\item Quartus II project creation
+\item Constraint assignments
+\item Compilation
+\item Embedded software generation 
+\end{enumerate}
+
+\section { The Platform Description File}
+\begin{enumerate}
+\item The Platform description file
+This paragraph describes the various fields used to specify all the board features
+
+\begin{tabular}{|c|c|c|}
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+• & • & • \\ 
+\hline 
+\end{tabular} 
+\end{enumerate}
+\section { Running the application}
+\begin{enumerate}
+\item Command line
+This paragraph describes the various fields used to run the application
+\end{enumerate}
+
+\end{document}
