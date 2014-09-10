@@ -12,8 +12,11 @@ def createQSF(filename):
     fqpf = open(path + '/'+ filename + '.qpf', 'w')
     fqsf = open(path + '/'+ filename +'.qsf', 'w')
     
-    fqpf.write('This is a test for the qpf file creation\n')
-    fqsf.write('This is a test for the qsf file creation\n')
+    fqpf.write('This is a test for the qpf file creation 2\n')
+    fqsf.write('This is a test for the qsf file creation 2\n')
+    fqsf.close()
+    fqpf.close()
+    print 'The Quartus project Files are now created '
     
     return
 
