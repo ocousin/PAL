@@ -17,51 +17,37 @@ def main(argv):
     inputfile = ''
     outputfile = ''
     try:
-        opts, args = getopt.getopt(argv,"hrn:i:o:",["prjfile=","ifile=","ofile="])
+        opts, args = getopt.getopt(argv,"hr:i:o:",["ifile=","ofile="])
     except getopt.GetoptError:
         print 'pal.py -i <inputfile> -o <outputfile>'
         sys.exit(2)
     for opt, arg in opts:
+        #option for the help menu
         if opt == '-h':
             print 'This is your help menu pal!'
             print 'pal.py -i <inputfile> -o <outputfile>'
             sys.exit()
             sys.exit()
-        elif opt in ("-n", "--prjfile"):
-            projectName = arg
-            print'Your project will be called',projectName
-            #fqpf = open(projectName + 'qpf', 'w')
-            #fqsf = open(projectName +'.qsf', 'w')
-            quartusFiles.createQSF(projectName)
+        # Option for the input file name
         elif opt in ("-i", "--ifile"):
             inputfile = arg
+        # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
             outputfile = arg
+            quartusFiles.createQSF(outputfile)
+        # Option for reading the Platform Configuration Files
         elif opt == '-r':
             print 'opening the input file'
             f = open(inputfile, 'r')
             for line in f:
                 print line,
-
-    print 'Input file is "', inputfile
-    print 'Output file is "', outputfile
     
     #Let's open the xml declaration to see what's in it
     tree = ET.parse(inputfile)
     root = tree.getroot()
     
+    print'DONE!'
     
-    
-    #f = open(inputfile, 'r')
-    #for line in f:
-    #    print line,
-        
-    #fqpf = open('test.qpf', 'w')
-    #fqpf.write('This is a test for the qpf file creation\n')
-#  
-#  fqsf = open(outputfile.qsf, 'w')
-    #fqsf.write('This is a test for the qsf file creation\n')
-
 if __name__ == "__main__":
     main(sys.argv[1:])
 
