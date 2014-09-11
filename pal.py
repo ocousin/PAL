@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import quartusFiles
 
 #This is a test done from my laptop +eclipse
+#This is a test from work
 print "Welcome to PAL, let me help you to build you reference design"
 def main(argv):
     projectName = ''
