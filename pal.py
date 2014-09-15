@@ -24,6 +24,7 @@ def main(argv):
         # Option for the input file name
         elif opt in ("-i", "--ifile"):
             inputfile = arg
+            print 'The input file is called ',inputfile
         # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
             outputfile = arg
@@ -36,8 +37,25 @@ def main(argv):
                 print line,
     
     #Let's open the xml declaration to see what's in it
-    tree = ET.parse(inputfile)
+    #tree = ET.parse(inputfile)
+    #root = tree.getroot()
+    
+    
+    tree = ET.parse('AlteraCVSoCDevKit.xml')
     root = tree.getroot()
+    print 'root.tag',root.tag
+    
+    for child in root:
+        print child.tag, child.attrib
+        
+    for pin in root.iter('pin'):
+        #name       = pin.get('name')
+        #location   = pin.get('location')
+        #ioStandard = pin.get('io_standard')
+        print pin.attrib
+        print 'The pin ',pin.attrib['name'],'is located @ ',pin.attrib['location']
+    
+    
     
     print'DONE!'
     

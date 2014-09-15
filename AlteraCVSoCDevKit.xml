@@ -5,13 +5,13 @@
 		<softwareRev rev="14.0"/>
 	</boardEnviroment>
 	
-    <boardInfo name="Altera CycloneV Soc Development Kit">
+    <boardInfo name="Altera CycloneV Soc Development Kit" surname = "tralala">
         <revision>revD</revision>
         <family>CYCLONEV</family>
         <device>5CSXFC6D6F31C6</device>
     </boardInfo>
     
-    <boardPinOut>
+    <pinOutInformation>
     <pin location="PIN_AC18" name="fpga_clk_50" io_standard="1.5 V"/>
     <!-- PIO BUTTON SETTINGS -->
     <pin location="PIN_AB13" name="fpga_button_pio[1]" io_standard="1.5 V"/>
@@ -26,8 +26,7 @@
     <pin location="PIN_Y16"  name="fpga_led_pio[1]" io_standard="1.5 V"/>
     <pin location="PIN_W15"  name="fpga_led_pio[2]" io_standard="1.5 V"/>
     <pin location="PIN_AB17" name="fpga_led_pio[3]" io_standard="1.5 V"/>
-    
-    </boardPinOut>
+    </pinOutInformation>
 
 
 </Platform>
