@@ -12,23 +12,23 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"hr:i:o:",["ifile=","ofile="])
     except getopt.GetoptError:
-        print 'pal.py -i <inputfile> -o <outputfile>'
+        print 'pal.py -i <configurationFile> -o <projectFile>'
         sys.exit(2)
     for opt, arg in opts:
         #option for the help menu
         if opt == '-h':
             print 'This is your help menu pal!'
-            print 'pal.py -i <inputfile> -o <outputfile>'
+            print 'pal.py -i <configurationFile> -o <projectFile>'
             sys.exit()
             sys.exit()
         # Option for the input file name
         elif opt in ("-i", "--ifile"):
-            inputfile = arg
-            print 'The input file is called ',inputfile
+            configurationFile = arg
+            print 'The input file is called ',configurationFile
         # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
             outputfile = arg
-            quartusFiles.createQSF(outputfile)
+            quartusFiles.createQSF(configurationFile,projectFile)
         # Option for reading the Platform Configuration Files
         elif opt == '-r':
             print 'opening the input file'

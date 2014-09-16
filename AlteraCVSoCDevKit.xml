@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <Platform>
-	<boardEnviroment>
+	<softwareInfo> <!--This is where the quartus software info are stored -->
 		<softwareName name="QuartusII"/>
 		<softwareRev rev="14.0"/>
-	</boardEnviroment>
+	</softwareInfo>
 	
     <boardInfo name="Altera CycloneV Soc Development Kit" surname = "tralala">
         <revision>revD</revision>
