@@ -3,6 +3,8 @@ import sys, getopt
 import xml.etree.ElementTree as ET
 import quartusFiles
 
+#changing something
+
 #This is a test done from my laptop +eclipse
 print "Welcome to PAL, let me help you to build you reference design"
 def main(argv):
