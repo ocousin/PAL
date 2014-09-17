@@ -12,20 +12,20 @@
     </boardInfo>
     
     <pinOutInformation>
-    <pin location="PIN_AC18" name="fpga_clk_50" io_standard="1.5 V"/>
-    <!-- PIO BUTTON SETTINGS -->
-    <pin location="PIN_AB13" name="fpga_button_pio[1]" io_standard="1.5 V"/>
-    <pin location="PIN_AA13" name="fpga_button_pio[0]" io_standard="1.5 V"/>
-    <!-- DIPSW SETTINGS -->
-    <pin location="PIN_AG10" name="fpga_dipsw_pio[0]" io_standard="1.5 V"/>
-    <pin location="PIN_AH9"  name="fpga_dipsw_pio[1]" io_standard="1.5 V"/>
-    <pin location="PIN_AF11" name="fpga_dipsw_pio[2]" io_standard="1.5 V"/>
-    <pin location="PIN_AG11" name="fpga_dipsw_pio[3]" io_standard="1.5 V"/>
-    <!-- PIO LED SETTINGS -->
-    <pin location="PIN_AK2"  name="fpga_led_pio[0]" io_standard="1.5 V"/>
-    <pin location="PIN_Y16"  name="fpga_led_pio[1]" io_standard="1.5 V"/>
-    <pin location="PIN_W15"  name="fpga_led_pio[2]" io_standard="1.5 V"/>
-    <pin location="PIN_AB17" name="fpga_led_pio[3]" io_standard="1.5 V"/>
+    	<pin location="PIN_AC18" name="fpga_clk_50" io_standard="1.5 V"/>
+	    <!-- PIO BUTTON SETTINGS -->
+	    <pin location="PIN_AB13" name="fpga_button_pio[1]" io_standard="1.5 V"/>
+	    <pin location="PIN_AA13" name="fpga_button_pio[0]" io_standard="1.5 V"/>
+	    <!-- DIPSW SETTINGS -->
+	    <pin location="PIN_AG10" name="fpga_dipsw_pio[0]" io_standard="1.5 V"/>
+	    <pin location="PIN_AH9"  name="fpga_dipsw_pio[1]" io_standard="1.5 V"/>
+	    <pin location="PIN_AF11" name="fpga_dipsw_pio[2]" io_standard="1.5 V"/>
+	    <pin location="PIN_AG11" name="fpga_dipsw_pio[3]" io_standard="1.5 V"/>
+	    <!-- PIO LED SETTINGS -->
+	    <pin location="PIN_AK2"  name="fpga_led_pio[0]" io_standard="1.5 V"/>
+	    <pin location="PIN_Y16"  name="fpga_led_pio[1]" io_standard="1.5 V"/>
+	    <pin location="PIN_W15"  name="fpga_led_pio[2]" io_standard="1.5 V"/>
+	    <pin location="PIN_AB17" name="fpga_led_pio[3]" io_standard="1.5 V"/>
     </pinOutInformation>
 
 

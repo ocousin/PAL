@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys, getopt
-import xml.etree.ElementTree as ET
+
 import quartusFiles
 
 #This is a test done from my laptop +eclipse
@@ -27,8 +27,8 @@ def main(argv):
             print 'The input file is called ',configurationFile
         # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
-            outputfile = arg
-            #quartusFiles.createQSF(configurationFile,projectFile)
+            projectFile = arg
+            quartusFiles.createQSF(configurationFile,projectFile)
         # Option for reading the Platform Configuration Files
         elif opt == '-r':
             print 'opening the input file'
@@ -41,21 +41,21 @@ def main(argv):
     #root = tree.getroot()
     
     
-    tree = ET.parse('AlteraCVSoCDevKit.xml')
-    root = tree.getroot()
-    print 'root.tag',root.tag
-    
-    for child in root:
-        print child.tag, child.attrib
-        
-    for pin in root.iter('pin'):
-        #name       = pin.get('name')
-        #location   = pin.get('location')
-        #ioStandard = pin.get('io_standard')
-        print pin.attrib
-        print 'The pin ',pin.attrib['name'],'is located @ ',pin.attrib['location']
-    
-    
+#     tree = ET.parse('AlteraCVSoCDevKit.xml')
+#     root = tree.getroot()
+#     print 'root.tag',root.tag
+#     
+#     for child in root:
+#         print child.tag, child.attrib
+#         
+#     for pin in root.iter('pin'):
+#         #name       = pin.get('name')
+#         #location   = pin.get('location')
+#         #ioStandard = pin.get('io_standard')
+#         print pin.attrib
+#         print 'The pin ',pin.attrib['name'],'is located @ ',pin.attrib['location']
+#     
+#     
     
     print'DONE!'
     
