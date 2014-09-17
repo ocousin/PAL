@@ -3,10 +3,7 @@ import sys, getopt
 import xml.etree.ElementTree as ET
 import quartusFiles
 
-#changing something
-
 #This is a test done from my laptop +eclipse
-#This is a test from work
 print "Welcome to PAL, let me help you to build you reference design"
 def main(argv):
     projectName = ''
@@ -31,7 +28,7 @@ def main(argv):
         # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
             outputfile = arg
-            quartusFiles.createQSF(configurationFile,projectFile)
+            #quartusFiles.createQSF(configurationFile,projectFile)
         # Option for reading the Platform Configuration Files
         elif opt == '-r':
             print 'opening the input file'
