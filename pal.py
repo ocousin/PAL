@@ -55,7 +55,7 @@ def main(argv):
 #         print pin.attrib
 #         print 'The pin ',pin.attrib['name'],'is located @ ',pin.attrib['location']
 #     
-#     
+#     #this is another test see if this git stuff works
     
     print'DONE!'
     
