@@ -5,6 +5,9 @@ import quartusFiles
 
 #This is a test done from my laptop +eclipse
 print "Welcome to PAL, let me help you to build you reference design"
+for arg in sys.argv:
+    print arg
+    
 def main(argv):
     projectName = ''
     inputfile = ''
@@ -28,6 +31,7 @@ def main(argv):
         # Option for creating the quartus project files
         elif opt in ("-o", "--ofile"):
             projectFile = arg
+            quartusFiles.createQPF(configurationFile,projectFile)
             quartusFiles.createQSF(configurationFile,projectFile)
         # Option for reading the Platform Configuration Files
         elif opt == '-r':

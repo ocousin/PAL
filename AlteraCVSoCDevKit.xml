@@ -5,10 +5,10 @@
 		<softwareRev rev="14.0"/>
 	</softwareInfo>
 	
-    <boardInfo name="Altera CycloneV Soc Development Kit" surname = "tralala">
+    <boardInfo name="Altera CycloneV Soc Development Kit">
         <revision>revD</revision>
-        <family>CYCLONEV</family>
-        <device>5CSXFC6D6F31C6</device>
+        <family name= "CYCLONEV"/>
+        <device name = "5CSXFC6D6F31C6"/>
     </boardInfo>
     
     <pinOutInformation>
