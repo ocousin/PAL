@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import sys, getopt
-
+import xml.etree.ElementTree as ET
 import quartusFiles
-import qsysfiles
+#import qsysFile
 
 #This is a test done from my laptop +eclipse
 print "Welcome to PAL, let me help you to build you reference design"
@@ -39,19 +39,25 @@ def main(argv):
             print 'opening the input file'
             f = open(inputfile, 'r')
             for line in f:
-                print line,
+                print line
+
+   
     
     #Let's open the xml declaration to see what's in it
     #tree = ET.parse(inputfile)
     #root = tree.getroot()
     
     
-#     tree = ET.parse('AlteraCVSoCDevKit.xml')
-#     root = tree.getroot()
-#     print 'root.tag',root.tag
-#     
-#     for child in root:
-#         print child.tag, child.attrib
+# tree = ET.parse('AlteraCVSoCDevKit.xml')
+# root = tree.getroot()
+# print 'root.tag',root.tag
+# 
+# for info in root.iterparse('softwareRev'):
+#     quartusRev=info.attrib['rev']
+#     print 'The software xxxxxxxxxxxxxx',quartusRev
+     
+#for child in root:
+#   print child.tag, child.attrib
 #         
 #     for pin in root.iter('pin'):
 #         #name       = pin.get('name')

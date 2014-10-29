@@ -3,8 +3,8 @@ package require -exact qsys 14.0
 set_project_property DEVICE_FAMILY "Cyclone V"
 set_project_property DEVICE "5CSXFC6D6F31C8ES"
 # module properties
-set_module_property NAME {toto}
-#set_module_property DISPLAY_NAME {tata}
+set_module_property NAME {topLevel}
+#set_module_property DISPLAY_NAME {topLevel}
 
 # default module properties
 #set_module_property VERSION {1.0}
@@ -16,6 +16,13 @@ set_module_property NAME {toto}
 #set_module_property opaque_address_map false
 
 #proc compose { } {
+
+	set instances [ get_instances ]
+	foreach instance $instances {
+ 		send_message Information "$instance"
+	}
+
+
     # Instances and instance parameters
     # (disabled instances are intentionally culled)
     add_instance clk clock_source 14.0
@@ -739,4 +746,4 @@ set_module_property NAME {toto}
     set_interconnect_requirement {$system} {qsys_mm.clockCrossingAdapter} {HANDSHAKE}
     set_interconnect_requirement {$system} {qsys_mm.maxAdditionalLatency} {1}
 #}
-save_system toto
+save_system topLevel

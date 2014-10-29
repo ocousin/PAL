@@ -18,10 +18,12 @@ def createQPF(configurationFile, projectFile):
         
     tree = ET.parse(configurationFile)
     root = tree.getroot()
+    
 
     for info in root.iter('softwareRev'):
         quartusRev=info.attrib['rev']
-        #print 'The software ',quartusRev
+
+        print 'The software ',quartusRev
         
     ############################
     # Creation of the QPF file #
@@ -35,7 +37,7 @@ def createQPF(configurationFile, projectFile):
     fqpf.write('#---------------------------------------------#\n \n \n')
     # Version
     #print 'QUARTUS_VERSION = "14.0"\n'
-    fqpf.write('QUARTUS_VERSION = "%s"\n'%quartusRev)
+    #fqpf.write('QUARTUS_VERSION = "%s"\n'%quartusRev)
         # Date
     dateAndTime =  time.strftime("%X %B %d, %Y")
     #print 'DATE = "' + dateAndTime + '"'
@@ -100,14 +102,14 @@ def createQSF(configurationFile, projectFile):
 #     set_global_assignment -name VERILOG_FILE ghrd_top.v
 #     set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 
-    for pin in root.iter('pin'):
+#    for pin in root.iter('pin'):
     #name       = pin.get('name')
     #location   = pin.get('location')
     #ioStandard = pin.get('io_standard')
         #print pin.attrib
         #print 'The pin ',pin.attrib['name'],'is located @ ',pin.attrib['location']
         #set_location_assignment PIN_AC18 -to fpga_clk_50
-        fqsf.write('set_location_assignment %s -to %s \n'% (pin.attrib['location'], pin.attrib['name']))
+ #       fqsf.write('set_location_assignment %s -to %s \n'% (pin.attrib['location'], pin.attrib['name']))
         
         
 
