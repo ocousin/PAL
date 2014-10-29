@@ -81,13 +81,13 @@ def createQSF(configurationFile, projectFile):
     fqsf.write('#---------------------------------------------#\n \n \n')
 
     #set_global_assignment -name FAMILY CYCLONEV
-    fqsf.write('set_global_assignment -name "%s"\n'%FAMILY)
+    fqsf.write('set_global_assignment -name FAMILY %s\n'%FAMILY)
     #set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-    fqsf.write('set_global_assignment -name "%s"\n'%DEVICE)
+    fqsf.write('set_global_assignment -name DEVICE %s\n'%DEVICE)
     #set_global_assignment -name TOP_LEVEL_ENTITY ghrd_top
-    fqsf.write('set_global_assignment -name TOP_LEVEL_ENTITY "%s"\n'%projectFile)
+    fqsf.write('set_global_assignment -name TOP_LEVEL_ENTITY %s\n'%projectFile)
     #set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.0
-    fqsf.write('set_global_assignment -name ORIGINAL_QUARTUS_VERSION  "%s"\n'%quartusRev)
+    fqsf.write('set_global_assignment -name ORIGINAL_QUARTUS_VERSION  %s\n'%quartusRev)
     #set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:30:00  JUNE 23, 2014"
     dateAndTime =  time.strftime("%X %B %d, %Y")
     #print 'DATE = "' + dateAndTime + '"'
@@ -95,12 +95,46 @@ def createQSF(configurationFile, projectFile):
     #set_global_assignment -name LAST_QUARTUS_VERSION 14.0
     fqsf.write('set_global_assignment -name LAST_QUARTUS_VERSION  "%s"\n'%quartusRev)
     
-#     set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
-#     set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
-#     set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
-#     set_global_assignment -name VERILOG_FILE ip/debounce/debounce.v
-#     set_global_assignment -name VERILOG_FILE ghrd_top.v
-#     set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+
+####################################################
+#           example                                #
+####################################################
+
+# set_global_assignment -name FAMILY CYCLONEV
+# set_global_assignment -name DEVICE 5CSXFC6D6F31C6
+# set_global_assignment -name TOP_LEVEL_ENTITY ghrd_top
+# set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.0
+# set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:30:00  JUNE 23, 2014"
+# set_global_assignment -name LAST_QUARTUS_VERSION 14.0
+# set_global_assignment -name QIP_FILE soc_system/synthesis/soc_system.qip
+# set_global_assignment -name QIP_FILE ip/altsource_probe/hps_reset.qip
+# set_global_assignment -name VERILOG_FILE ip/edge_detect/altera_edge_detector.v
+# set_global_assignment -name VERILOG_FILE ip/debounce/debounce.v
+# set_global_assignment -name VERILOG_FILE ghrd_top.v
+# set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+# set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+# set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+# set_global_assignment -name SDC_FILE soc_system_timing.sdc
+# set_global_assignment -name ENABLE_SIGNALTAP ON
+# set_global_assignment -name USE_SIGNALTAP_FILE cti_tapping.stp
+# set_global_assignment -name SIGNALTAP_FILE cti_tapping.stp
+# set_location_assignment PIN_AC18 -to fpga_clk_50
+# set_location_assignment PIN_AB13 -to fpga_button_pio[1]
+# set_location_assignment PIN_AA13 -to fpga_button_pio[0]
+# set_location_assignment PIN_AG11 -to fpga_dipsw_pio[3]
+# set_location_assignment PIN_AF11 -to fpga_dipsw_pio[2]
+# set_location_assignment PIN_AH9 -to fpga_dipsw_pio[1]
+# set_location_assignment PIN_AG10 -to fpga_dipsw_pio[0]
+# set_location_assignment PIN_AB17 -to fpga_led_pio[3]
+# set_location_assignment PIN_W15 -to fpga_led_pio[2]
+# set_location_assignment PIN_Y16 -to fpga_led_pio[1]
+                                                        
+
+
+
+
+
 
 #    for pin in root.iter('pin'):
     #name       = pin.get('name')
